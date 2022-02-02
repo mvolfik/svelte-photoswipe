@@ -15,7 +15,10 @@
 
   const options = writable(undefined);
   $: {
-    if (!element || !images) break $;
+    // update opts on any change to config params as well as
+    // to image data (otherwise we risk triggering weird pswp bugs)
+
+    if (!element || !Array.isArray(images)) break $;
 
     const opts: any = { pswpModule: PhotoSwipe };
     if (individual) {
@@ -29,6 +32,8 @@
 
   onMount(() => {
     let lightbox;
+    // on each update, destroy any previous lightbox (to avoid weird bugs) and init new lightbox with new opts
+    // note that subscribe runs the function immediately for the first time
     const unsub = options.subscribe((opts) => {
       lightbox?.destroy?.();
       if (opts === undefined) return;
