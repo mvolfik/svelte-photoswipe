@@ -1,15 +1,31 @@
+<script context="module" lang="ts">
+  export interface GalleryItem {
+    src: string;
+    thumbnail?: {
+      src: string;
+      width: number;
+      height: number;
+    };
+    width: number;
+    height: number;
+    cropped?: boolean;
+    alt?: string;
+  }
+  export type GalleryData = Array<GalleryItem>;
+</script>
+
 <script lang="ts">
   import "photoswipe/dist/photoswipe.css";
   import PhotoSwipeLightbox from "photoswipe/dist/photoswipe-lightbox.esm";
   import PhotoSwipe from "photoswipe/dist/photoswipe.esm";
 
   import { onMount } from "svelte";
-
-  import type { GalleryData } from "./utils";
   import { writable } from "svelte/store";
 
   export let images: GalleryData;
   export let individual = false;
+  export let styling: "none" | "grid" | "flex" = "none";
+  export let gridColumns = 5;
 
   let element: HTMLDivElement;
 
@@ -47,7 +63,7 @@
   });
 </script>
 
-<div class="gallery" bind:this={element}>
+<div class="gallery styling-{styling}" style:--grid-columns={gridColumns} bind:this={element}>
   {#each images as img}
     {@const thumb = img.thumbnail ?? img}
     <a href={img.src} data-pswp-width={img.width} data-pswp-height={img.height} target="_blank"
@@ -55,3 +71,27 @@
     >
   {/each}
 </div>
+
+<style>
+  .gallery.styling-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .gallery.styling-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .gallery > a > img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
