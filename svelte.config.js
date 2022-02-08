@@ -10,6 +10,7 @@ const config = {
 
   kit: {
     adapter: adapter(),
+    paths: { base: "/svelte-photoswipe" },
 
     // hydrate the <div id="svelte"> element in src/app.html
     target: "#svelte",
