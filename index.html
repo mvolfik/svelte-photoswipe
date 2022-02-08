@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-security-policy" content=""><title>svelte-photoswipe</title>
+	<link rel="stylesheet" href="/_app/assets/pages/index.svelte-cace183d.css">
+	<link rel="modulepreload" href="/_app/start-2709eaa2.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-8b377986.js">
+	<link rel="modulepreload" href="/_app/layout.svelte-962c9401.js">
+	<link rel="modulepreload" href="/_app/pages/index.svelte-296239e7.js"><script type="module">
+		import { start } from "/_app/start-2709eaa2.js";
+		start({
+			target: document.querySelector("#svelte"),
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/layout.svelte-962c9401.js"),
+						import("/_app/pages/index.svelte-296239e7.js")
+				],
+				url: new URL("http://sveltekit-prerender/"),
+				params: {}
+			}
+		});
+	</script>
+  </head>
+  <body>
+    <div id="svelte">
+
+
+
+
+<h1>svelte-photoswipe</h1>
+<p>GitHub repository: <a href="https://github.com/mvolfik/svelte-photoswipe">mvolfik/svelte-photoswipe</a></p>
+<p>NPM: <a href="https://npmjs.com/package/svelte-photoswipe">svelte-photoswipe</a></p>
+<h2>Usage:</h2>
+<div class="outer svelte-15tms8x"><pre style="overflow: auto;"><code>&lt;script lang=&quot;ts&quot;&gt;
+  import PhotoSwipeGallery from &quot;svelte-photoswipe&quot;;
+  import type { GalleryItem } from &quot;svelte-photoswipe&quot;;
+  const images: GalleryItem[] = [];
+  images.push({
+    src: &quot;https://picsum.photos/id/1/3000/4000&quot;,
+    width: 3000,
+    height: 4000,
+    alt: &quot;Photo&quot;, // optional
+    cropped: true, // optional, default=false; see https://photoswipe.com/v5/docs/ 
+    thumbnail: { src: &quot;https://picsum.photos/id/1/300/400&quot;, width: 300, height: 400 },
+  });
+  // ...
+&lt;/script&gt;
+
+&lt;PhotoSwipeGallery {images} styling=&quot;flex&quot; /&gt;</code></pre>
+  <div class="knobby"><h3>Customize:</h3>
+    <p><label><input type="checkbox"> Individual</label></p>
+
+    <p><label>Images in gallery: <input type="number" min="0" value="10"></label></p>
+
+    <fieldset class="svelte-15tms8x"><legend>Styling</legend>
+      <label class="svelte-15tms8x"><input type="radio" name="styling" value="none" class="svelte-15tms8x">None</label>
+      <label class="svelte-15tms8x"><input type="radio" name="styling" value="grid" class="svelte-15tms8x">Grid</label>
+      <label class="child svelte-15tms8x">Grid columns: <input type="range" min="2" max="10" class="svelte-15tms8x" value="5"></label>
+      <label class="svelte-15tms8x"><input type="radio" name="styling" value="flex" class="svelte-15tms8x" checked>Flex</label></fieldset></div></div>
+
+<div class="gallery styling-flex svelte-fjes6j" style="--grid-columns: 5;">
+    <a href="https://picsum.photos/id/0/2080/2080" data-pswp-width="2080" data-pswp-height="2080" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/0/208/208" alt="" width="208" height="208" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/2/3060/1970" data-pswp-width="3060" data-pswp-height="1970" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/2/306/197" alt="" width="306" height="197" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/4/2560/3020" data-pswp-width="2560" data-pswp-height="3020" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/4/256/302" alt="" width="256" height="302" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/6/1400/3060" data-pswp-width="1400" data-pswp-height="3060" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/6/140/306" alt="" width="140" height="306" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/8/3020/3200" data-pswp-width="3020" data-pswp-height="3200" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/8/302/320" alt="" width="302" height="320" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/10/2370/2370" data-pswp-width="2370" data-pswp-height="2370" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/10/237/237" alt="" width="237" height="237" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/12/1110/2560" data-pswp-width="1110" data-pswp-height="2560" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/12/111/256" alt="" width="111" height="256" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/14/1970/2910" data-pswp-width="1970" data-pswp-height="2910" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/14/197/291" alt="" width="197" height="291" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/16/3200/1110" data-pswp-width="3200" data-pswp-height="1110" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/16/320/111" alt="" width="320" height="111" class="svelte-fjes6j"></a>
+    <a href="https://picsum.photos/id/18/2910/1400" data-pswp-width="2910" data-pswp-height="1400" target="_blank" class="svelte-fjes6j"><img src="https://picsum.photos/id/18/291/140" alt="" width="291" height="140" class="svelte-fjes6j"></a>
+</div>
+
+</div>
+  </body>
+</html>
