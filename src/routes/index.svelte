@@ -32,7 +32,7 @@
 <p>NPM: <a href="https://npmjs.com/package/svelte-photoswipe">svelte-photoswipe</a></p>
 <h2>Usage:</h2>
 <div class="outer">
-  <pre><code
+  <pre style="overflow: auto;"><code
       >&lt;script lang="ts"&gt;
   import PhotoSwipeGallery from "svelte-photoswipe";
   import type &lbrace; GalleryItem &rbrace; from "svelte-photoswipe";
