@@ -1,0 +1,9 @@
+*
+
+!/src/lib/**
+!/dist/**
+!/LICENSE
+!/README.md
+!/package.json
+!/usage.svelte
+!/patchPhotoswipe.cjs
