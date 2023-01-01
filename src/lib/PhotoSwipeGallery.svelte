@@ -66,7 +66,7 @@
 <div class="gallery styling-{styling}" style:--grid-columns={gridColumns} bind:this={element}>
   {#each images as img}
     {@const thumb = img.thumbnail ?? img}
-    <a href={img.src} data-pswp-width={img.width} data-pswp-height={img.height} target="_blank"
+    <a href={img.src} data-pswp-width={img.width} data-pswp-height={img.height} target="_blank" rel="noreferrer"
       ><img src={thumb.src} alt={img.alt ?? ""} width={thumb.width} height={thumb.height} /></a
     >
   {/each}
